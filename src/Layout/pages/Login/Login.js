@@ -1,7 +1,11 @@
 import React from 'react'
-import login from "../../../assets/login.jpg"
+import login from "../../../assets/login.jpg";
+import { useEffect, useState, useRef } from "react";
 
 const Login= () => {
+
+
+  
   return (
     <div>
         <section className="vh-100">
@@ -15,6 +19,7 @@ const Login= () => {
         <form >
          
           <div className="form-outline mb-4">
+          <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">LOGIN</p>
             <input type="email" id="form1Example13" className="form-control form-control-lg" />
             <label className="form-label" for="form1Example13">Email address</label>
           </div>
@@ -35,17 +40,17 @@ const Login= () => {
           </div>
 
           
-          <button type="submit" className="btn btn-primary btn-lg">Sign in</button>
+          <button type="submit" className="btn btn-primary btn-lg w-100">Sign in</button>
 
           <div className="divider d-flex align-items-center my-4">
             <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
           </div>
 
-          <a className="btn btn-primary btn-lg btn-block" style={{backgroundColor:"#3b5998"}} href="#!"
+          <a className="btn btn-primary btn-lg btn-block w-100" style={{backgroundColor:"#3b5998",marginBottom:10}} href="#!"
             role="button">
             <i className="fab fa-facebook-f me-2"></i>Continue with Facebook
           </a>
-          <a className="btn btn-primary btn-lg btn-block" style={{backgroundColor: "#55acee"}} href="#!"
+          <a className="btn btn-primary btn-lg btn-block w-100" style={{backgroundColor: "#55acee"}} href="#!"
             role="button">
             <i className="fab fa-twitter me-2"></i>Continue with Twitter</a>
 

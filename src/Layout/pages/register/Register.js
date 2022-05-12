@@ -1,10 +1,31 @@
 import { Card, CardContent, Grid, TextField, Typography } from '@mui/material'
 import React from 'react'
+import { useEffect, useState, useRef } from "react";
 import signuplogin from "../../../assets/signuplogin.jpg"
 
 const Register = () => {
-  return (
+  const [data, setdata] = useState({name:'',email:'',Password:"",confPassword:"",userName:""})
+  const handleName=(e)=>{
+    e.preventDefault()
     
+  }
+  const handleEmail=(e)=>{
+
+  }
+  const handlePassword=(e)=>{
+
+  }
+
+  const handleConfpassword=(e)=>{
+    
+  }
+
+  const handleUsername=(e)=>{
+
+  }
+
+  return (
+    <>
       <section style={{backgroundColor:"#eee"}}>
     <div className="container h-100 m-10">
       <div className="row d-flex justify-content-center align-items-center h-100">
@@ -21,15 +42,24 @@ const Register = () => {
                     <div className="d-flex flex-row align-items-center mb-4">
                       <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div className="form-outline flex-fill mb-0">
-                        <input type="text" id="name" className="form-control form-control-lg" />
+                        <input type="text" id="name" className="form-control form-control-lg" value={data.name} onChange={handleName}/>
                         <label className="form-label" for="name">Your Name</label>
                       </div>
                     </div>
+
+                    <div className="d-flex flex-row align-items-center mb-4">
+                      <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div className="form-outline flex-fill mb-0">
+                        <input type="text" id="userName" className="form-control form-control-lg" value={data.userName} onChange={handleUsername}/>
+                        <label className="form-label" for="userName">Your user name</label>
+                      </div>
+                    </div>
+
   
                     <div className="d-flex flex-row align-items-center mb-4">
                       <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                       <div className="form-outline flex-fill mb-0">
-                        <input type="email" id="email" className="form-control form-control-lg" />
+                        <input type="email" id="email" className="form-control form-control-lg" value={data.email} onChange={handleEmail}/>
                         <label className="form-label" for="email">Your Email</label>
                       </div>
                     </div>
@@ -37,7 +67,7 @@ const Register = () => {
                     <div className="d-flex flex-row align-items-center mb-4">
                       <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                       <div className="form-outline flex-fill mb-0">
-                        <input type="password" id="password" className="form-control form-control-lg" />
+                        <input type="password" id="password" className="form-control form-control-lg" value={data.Password} onChange={handlePassword}/>
                         <label className="form-label" for="password">Password</label>
                       </div>
                     </div>
@@ -45,7 +75,7 @@ const Register = () => {
                     <div className="d-flex flex-row align-items-center mb-4">
                       <i className="fas fa-key fa-lg me-3 fa-fw"></i>
                       <div className="form-outline flex-fill mb-0">
-                        <input type="password" id="repassword" className="form-control form-control-lg" />
+                        <input type="password" id="repassword" className="form-control form-control-lg" value={data.confPassword} onChange={handleConfpassword}/>
                         <label className="form-label" for="repassword">Repeat your password</label>
                       </div>
                     </div>
@@ -78,7 +108,7 @@ const Register = () => {
       </div>
     </div>
   </section>
-  
+  </>
 
   )
 }
